@@ -1,20 +1,17 @@
-alias Getaways.Repo
-alias Getaways.Vacation.Place
+alias Getaways.Menu
 
-%Place{
-  name: "Sand Castle",
-  location: "Portugal",
-  max_guests: 2
-} |> Repo.insert!
+Menu.create_item(
+  %{
+    name: "Burger",
+    description: "One way ticket to high cholesterol",
+    price: 99.0
+  }
+)
 
-%Place{
-  name: "Blue Igloo",
-  location: "Canada",
-  max_guests: 4
-} |> Repo.insert!
-
-%Place{
-  name: "Ski Cabin",
-  location: "Switzerland",
-  max_guests: 6
-} |> Repo.insert!
+Menu.create_item(
+  %{
+    name: "Quarter Pounder Burger",
+    description: "A faster, one way ticket to high cholesterol",
+    price: 199.0
+  }
+)
